@@ -12,7 +12,7 @@ router.get('/pizzaTopping/:id', (req, res) => {
     SELECT 
     pt.*,
     t.name as toppingName,
-    p.name  as PizzaName
+    p.name  as pizzaName
     FROM pizzatopping as pt
     INNER JOIN topping as t
     ON t.id = pt.idTopping
