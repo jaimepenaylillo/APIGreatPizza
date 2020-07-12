@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+var cors = require('cors');
 
 // Settings
 
@@ -10,7 +11,7 @@ app.set('port', process.env.Port || 3000)
 app.use(express.json());
 
 // Routes
-
+app.use(cors()); 
 app.use(require('./routes/pizza'));
 
 app.get('/', function (req, res) {

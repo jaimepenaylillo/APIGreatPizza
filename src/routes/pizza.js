@@ -31,7 +31,6 @@ router.get('/pizza/:id', (req, res) => {
 // Add a Pizza
 router.post('/pizza', (req, res) => {
     const { id, name } = req.body;
-    console.log(id, name);
     const query = `
       SET @id = ?;
       SET @name = ?;
